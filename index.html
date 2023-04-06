@@ -20,19 +20,17 @@
     </nav>
 
     <div class="container mt-3">
-
-
         <div class="row">
-            <div class="col">
+            <div class="col-6" id="col-1">
                 <div class="card mb-3">
                     <div class="card-body">
                         <h4>Aufträge</h4>
                         <p>
                             Wählen Sie einen Auftrag aus
                         </p>
-                        <button class="btn btn-secondary">Auftrag 10000</button>
-                        <button class="btn btn-secondary">Auftrag 20000</button>
-                        <button class="btn btn-secondary">Auftrag 30000</button>
+                        <button class="btn btn-danger btn-event mb-2" data-type="auftrag" id="1000">Auftrag 10000</button>
+                        <button class="btn btn-danger btn-event mb-2" data-type="auftrag" id="2000">Auftrag 20000</button>
+                        <button class="btn btn-danger btn-event mb-2" data-type="auftrag" id="3000">Auftrag 30000</button>
                     </div>
                 </div>
                 <div class="card mb-3">
@@ -41,9 +39,9 @@
                         <p>
                             Wählen Sie einen Debitoren aus
                         </p>
-                        <button class="btn btn-success">Debitor 10000</button>
-                        <button class="btn btn-success">Debitor 20000</button>
-                        <button class="btn btn-success">Debitor 30000</button>
+                        <button class="btn btn-success btn-event mb-2" data-type="debitor" id="1000">Debitor 10000</button>
+                        <button class="btn btn-success btn-event mb-2" data-type="debitor" id="2000">Debitor 20000</button>
+                        <button class="btn btn-success btn-event mb-2" data-type="debitor" id="3000">Debitor 30000</button>
                     </div>
                 </div>
                 <div class="card mb-3">
@@ -52,32 +50,30 @@
                         <p>
                             Wählen Sie einen Kreditoren
                         </p>
-                        <button class="btn btn-warning">Kreditor 10000</button>
-                        <button class="btn btn-warning">Kreditor 20000</button>
-                        <button class="btn btn-warning">Kreditor 30000</button>
+                        <button class="btn btn-warning btn-event mb-2" data-type="kreditor" id="1000">Kreditor 10000</button>
+                        <button class="btn btn-warning btn-event mb-2" data-type="kreditor" id="2000">Kreditor 20000</button>
+                        <button class="btn btn-warning btn-event mb-2" data-type="kreditor" id="3000">Kreditor 30000</button>
                     </div>
                 </div>
 
-                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#einstellungen-sidebar" role="button">
-                    Einstellungen
-                </a>
+                <div class="mb-3">
+                    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#einstellungen-sidebar" role="button">
+                        Einstellungen
+                    </a>
 
+                    <button class="btn btn-primary btn-refresh">Neu laden</button>
+                </div>
             </div>
 
 
-            <div class="col">
+            <div class="col-6" id="col-2">
                 <div class="card">
-                    <div class="ratio ratio-1x1">
-                        <iframe class="embed-responsive-item" src="https://www.buerosystemhaus.de" allowfullscreen></iframe>
-                    </div>
+
+                    <iframe id="frame" class="embed-responsive-item" style="min-height: 60vh;" src="" allowfullscreen></iframe>
 
                 </div>
             </div>
-
         </div>
-
-
-
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="einstellungen-sidebar">
             <div class="offcanvas-header">
@@ -89,81 +85,113 @@
                     Hier können die übermittelten Werte eingestellt werden:
                 </div>
                 <br>
-                <!-- guid -->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="noForm">
-                    <label class="form-check-label" for="noForm">noForm</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="noFeed">
-                    <label class="form-check-label" for="noFeed">noFeed</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="noFulltext">
-                    <label class="form-check-label" for="noFulltext">noFulltext</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="noImagePreview">
-                    <label class="form-check-label" for="noImagePreview">noImagePreview</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="newDocVersFct">
-                    <label class="form-check-label" for="newDocVersFct">newDocVersFct</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="saveDocFct">
-                    <label class="form-check-label" for="saveDocFct">saveDocFct</label>
-                </div>
-                <!-- webClientURL -->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="gotoFct">
-                    <label class="form-check-label" for="gotoFct">gotoFct</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="removeEntryFct">
-                    <label class="form-check-label" for="removeEntryFct">removeEntryFct</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="startWorkflowFct">
-                    <label class="form-check-label" for="startWorkflowFct">startWorkflowFct</label>
-                </div>
-                <!-- startWorkflowTemplates -->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="externalLinkFct">
-                    <label class="form-check-label" for="externalLinkFct">externalLinkFct</label>
-                </div>
-                <!-- folderMask -->
-                <!-- documentMask -->
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="hasSearch">
-                    <label class="form-check-label" for="hasSearch">hasSearch</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="referenceEntryFct">
-                    <label class="form-check-label" for="referenceEntryFct">referenceEntryFct</label>
-                </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="refreshFct">
-                    <label class="form-check-label" for="refreshFct">refreshFct</label>
-                </div>
-                
+                <form id="settings-form">
+                    <!-- guid -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="noForm" data-default="true">
+                        <label class="form-check-label" for="noForm">noForm</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="noFeed" data-default="true">
+                        <label class="form-check-label" for="noFeed">noFeed</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="noFulltext" data-default="true">
+                        <label class="form-check-label" for="noFulltext">noFulltext</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="noImagePreview" data-default="true">
+                        <label class="form-check-label" for="noImagePreview">noImagePreview</label>
+                    </div>
+                    <!-- rFInit -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="newDocVersFct" data-default="false">
+                        <label class="form-check-label" for="newDocVersFct">newDocVersFct</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="saveDocFct" data-default="false">
+                        <label class="form-check-label" for="saveDocFct">saveDocFct</label>
+                    </div>
+                    <!-- webClientURL -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="gotoFct" data-default="false">
+                        <label class="form-check-label" for="gotoFct">gotoFct</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="removeEntryFct" data-default="false">
+                        <label class="form-check-label" for="removeEntryFct">removeEntryFct</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="startWorkflowFct" data-default="false">
+                        <label class="form-check-label" for="startWorkflowFct">startWorkflowFct</label>
+                    </div>
+                    <!-- startWorkflowTemplates -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="externalLinkFct" data-default="false">
+                        <label class="form-check-label" for="externalLinkFct">externalLinkFct</label>
+                    </div>
+                    <!-- folderMask -->
+                    <!-- documentMask -->
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="hasSearch" data-default="false">
+                        <label class="form-check-label" for="hasSearch">hasSearch</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="referenceEntryFct" data-default="false">
+                        <label class="form-check-label" for="referenceEntryFct">referenceEntryFct</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="refreshFct" data-default="false">
+                        <label class="form-check-label" for="refreshFct">refreshFct</label>
+                    </div>
+
+                </form>
+
+                <br>
+
+                <button class="btn btn-primary btn-all-default">Default</button>
+                <button class="btn btn-success btn-all-on">Alle An</button>
+                <button class="btn btn-danger btn-all-off">Alle Aus</button>
+
+
                 <hr>
 
-                <button class="btn btn-success">Alle An</button>
-                <button class="btn btn-danger">Alle Aus</button>
-        
+                <strong>Layout</strong>
+                <br>
+                <button class="btn btn-secondary btn-layout" data-layout="1">Kleiner</button>
+                <button class="btn btn-secondary btn-layout" data-layout="2">Normal</button>
+                <button class="btn btn-secondary btn-layout" data-layout="3">Größer</button>
+                <button class="btn btn-secondary btn-layout" data-layout="4">Reihe</button>
+
             </div>
         </div>
+
+
+        <div class="card p-1 mt-3">
+            <small>Link der aufgerufen wird:
+                <code id="link-preview"></code></small>
+        </div>
+
 
         <small>Version 1.0 | Tobias Pitzer</small>
     </div>
 
 
-    
+
 
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/jquery-3.6.4.min.js"></script>
+    <script src="./assets/js/demo.js"></script>
+
+    <script>
+        demo.init();
+
+
+
+    </script>
+
+
 </body>
 
 </html>
