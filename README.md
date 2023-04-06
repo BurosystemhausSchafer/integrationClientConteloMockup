@@ -8,7 +8,7 @@ In der Website die folgenden Parameter angeben:
 
 ![Daten für Website](assets/img/doku_1.png?raw=true "Screenshot")
 
-Nun muss man noch die die ZIP-Datei `filestructure.zip` nach ELO importieren. 
+Nun muss man noch die die ZIP-Datei `demo/filestructure.zip` nach ELO importieren. 
 
 **Benutzen**<br>
 Einfach die Website `http://SRV01` aufrufen 
