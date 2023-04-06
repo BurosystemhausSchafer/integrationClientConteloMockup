@@ -119,7 +119,7 @@ var demo = {
     // Temporär, noch mit Suche beschäftigen
     getGuid(type, id) {
         guid = {
-            auftraege: {
+            auftrag: {
                 1000: '3F9BF7EC-5225-7799-754C-3B666BF612A3',
                 2000: '18337D1B-C268-4AD7-C396-D69B3B7AACE8',
                 3000: '8F93567C-770F-935C-713E-3D35D7A6D4EA',
@@ -135,6 +135,10 @@ var demo = {
                 3000: '404E18A8-DED9-3039-B075-3DF4BEECA663',
             }
         }
+
+
+        console.log(type, id);
+        console.log(guid[type][id]);
 
         return "(" + guid[type][id] + ")";
     }
