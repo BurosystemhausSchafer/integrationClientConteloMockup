@@ -1,0 +1,7 @@
+body {
+    background: #eee;
+}
+
+.navbar-brand img {
+    max-height: 30px;
+}
