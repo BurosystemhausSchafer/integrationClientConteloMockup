@@ -136,10 +136,6 @@ var demo = {
             }
         }
 
-
-        console.log(type, id);
-        console.log(guid[type][id]);
-
         return "(" + guid[type][id] + ")";
     }
 }
