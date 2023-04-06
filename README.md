@@ -1,7 +1,7 @@
 ### Demo Mockup für den Integration Client
 
 
-**Installation**
+**Installation**<br>
 Für die Installation einfach unter `C:\integrationClientMockup` auf der Contelo ablegen. 
 Anschließen den `IIS-Manager` starten. Dort mit Rechtsklick auf `Sites` eine `Website hinzufügen...`
 In der Website die folgenden Parameter angeben: 
@@ -10,5 +10,5 @@ In der Website die folgenden Parameter angeben:
 
 Nun muss man noch die die ZIP-Datei `filestructure.zip` nach ELO importieren. 
 
-**Benutzen**
+**Benutzen**<br>
 Einfach die Website `http://SRV01` aufrufen 
