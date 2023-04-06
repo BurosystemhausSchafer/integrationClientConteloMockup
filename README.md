@@ -10,5 +10,12 @@ In der Website die folgenden Parameter angeben:
 
 Nun muss man noch die die ZIP-Datei `demo/filestructure.zip` nach ELO importieren. 
 
+Als `system` wird `demo` benutzt. Diese muss existieren. 
+Ist in der Standard Contelo nicht da.
+
 **Benutzen**<br>
 Einfach die Website `http://SRV01` aufrufen 
+
+**Bekannte Fehler**<br>
+Aktuell werden die Einstellungen nicht in den Integration Client übernommen. 
+Siehe https://community.elo.com/community/plugin/de.elo.ix.plugin.proxy/wf/apps/app/sol.knowledge.apps.KnowledgeBoard/?lang=de&#/post/(37935512-AFE6-2095-59AE-0518632F3778)
